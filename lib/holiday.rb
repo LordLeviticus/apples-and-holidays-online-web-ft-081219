@@ -87,7 +87,7 @@ def all_winter_holiday_supplies(holiday_hash)
 end
 
 def all_supplies(holiday_hash)
-  holiday_supplies.each do |season, data|
+  holiday_hash.each do |season, data|
     puts "#{season.to_s.capitalize!}:"
     data.each do |holiday, supply|
       # holiday == :fourth_of_july
@@ -120,7 +120,7 @@ def all_holidays_with_bbq(holiday_hash)
     end
   end.flatten.compact
 end
-all_holidays_with_bbq(holiday_supplies)
+all_holidays_with_bbq(holiday_hash)
 
 
 
